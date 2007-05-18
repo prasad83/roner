@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<web-app>
+	<display-name>Roner</display-name>
+	
+	<servlet>
+		<servlet-name>RoundedCornerServlet</servlet-name>
+		<servlet-class>web20.roner.servlets.RoundedCornerServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>RoundedCornerServlet</servlet-name>
+		<url-pattern>/rounded</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RoundedCornerHelpServlet</servlet-name>
+		<servlet-class>web20.roner.servlets.RoundedCornerHelpServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>RoundedCornerHelpServlet</servlet-name>
+		<url-pattern>/help</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+    	<welcome-file>help</welcome-file>
+	</welcome-file-list>	
+</web-app>
+		
