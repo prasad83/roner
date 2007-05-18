@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Roner</title>
+
+
+
+<style type="text/css">
+body { font: 14px, Verdana, Arial, sans-serif; }
+table { font: inherit; }
+table th { text-align: left; }
+a { color: blue; }
+a b { color: black; }
+</style></head><body>
+<h2>Roner - <u>Ro</u>unded Cor<u>ner</u> Generator</h2>
+<i>Implemented in Java</i>
+<p>You can use the <a href="#rounded_corner">rounded corner</a> and <a href="#shadow_boxes">shadow boxes </a> with easy now.</p>
+<p><b>URL: http://localhost:8080/Roner/rounded?</b></p>
+<table>
+	<tbody><tr><th>Parameter</th><th>Meaning</th>         <th>Valid Values</th></tr>
+	<tr><td>f</td>        <td>FILENAME</td>         <td>Only when run through console</td></tr>
+	<tr><td>c</td>        <td>COLOR</td>            <td><a href="#COLOR">COLOR</a></td></tr>
+	<tr><td>bc</td>       <td>BACKGROUND</td>       <td><a href="#COLOR">COLOR</a></td></tr>
+	<tr><td>ibc</td>      <td>INNER BACKGROUND</td> <td><a href="#COLOR">COLOR</a></td></tr>
+	<tr><td>w</td>        <td>WIDTH</td>            <td>int</td></tr>
+	<tr><td>h</td>        <td>HEIGHT</td>           <td>int</td></tr>
+	<tr><td>a</td>        <td>ANGLE</td>            <td>tl, tr, bl, br</td></tr>
+	<tr><td>sw</td>       <td>SHADOW WIDTH</td>     <td>int</td></tr>
+	<tr><td>o</td>        <td>SHADOW OPACITY</td>   <td>0.0 to 1.0</td></tr>
+	<tr><td>s</td>        <td>SHADOW SIDE</td>      <td>left, right, top, bottom</td></tr>
+	<tr><td>shadow</td>  <td>WHOLE SHADOW</td>      <td>true or false</td></tr>
+	<tr><td>ah</td>      <td>ARC HEIGHT</td>        <td>float</td></tr>
+	<tr><td>aw</td>      <td>ARC WIDTH</td>         <td>float</td></tr>
+</tbody></table>
+<p><a name="COLOR"><b>COLOR</b></a>:In RGB (like, d7d7d7 etc.) and
+aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive,
+red, silver, teal, white, yellow</p>
+<p><b>Output is PNG format image.</b></p>
+<p><b><u>Few Examples</u></b></p>
+<table>
+	<tbody><tr><th><a name="rounded_corner"><b>Build Corner:</b></a></th><td>c, bc, w, h, a, sw (optional), o(optional)</td></tr>
+</tbody></table>
+<table>
+	<tbody><tr valign="top"><td><img src="images/rounded_006.png"></td><td>http://localhost:8080/Roner/rounded?c=blue&amp;a=tl&amp;w=100&amp;h=100&amp;bc=white</td></tr>
+	<tr valign="top"><td><img src="images/rounded_005.png"></td><td>http://localhost:8080/Roner/rounded?c=d7d7d7&amp;a=br&amp;w=100&amp;h=100&amp;bc=blue</td></tr>
+</tbody></table>
+<br>
+<table>
+	<tbody><tr><th><a name="shadow_boxes"><b>Whole Shadow:</b></a></th><td>shadow, bc, w, h, aw, ah, sw, o, ibc(optional)</td></tr>
+</tbody></table>
+<table>
+	<tbody><tr valign="top">
+		<td><img src="images/rounded_002.png"></td>
+		<td>http://localhost:8080/Roner/rounded?shadow=true&amp;bc=red&amp;w=100&amp;h=100&amp;aw=10&amp;ah=10&amp;sw=10&amp;o=0.99999</td>
+	</tr>
+	<tr valign="top">
+		<td><img src="images/rounded_004.png"></td>
+		<td>http://localhost:8080/Roner/rounded?shadow=true&amp;bc=white&amp;ibc=efefef&amp;w=100&amp;h=100&amp;aw=10&amp;ah=10&amp;sw=5&amp;o=0.99999</td>
+	</tr>
+</tbody></table>
+<br>
+<table><tbody><tr><th>Side Shadow:</th><td>s, sw, o</td></tr></tbody></table>
+<table>
+	<tbody><tr valign="top">
+	<td><img src="images/rounded_003.png"></td>
+	<td>http://localhost:8080/Roner/rounded?s=left&amp;sw=100</td>
+	</tr>
+	<tr valign="top">
+	<td><img src="images/rounded.png"></td>
+    <td>http://localhost:8080/Roner/rounded?s=top&amp;sw=30</td>
+    </tr>
+</tbody></table>
+</body></html>

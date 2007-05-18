@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<project name="Roner" basedir="." default="dist">
+	<property name="src" value="src" />
+	<property name="dist" value="dist" />
+	<property name="web" value="web" />
+	<property name="classes" value="${web}/WEB-INF/classes" />
+	<property name="jarfile" value="${dist}/roner.jar" />
+	<property name="warfile" value="${dist}/Roner.war" />
+	<property name="tomcat" value="/home/prasad/Tomcat" />
+	
+	<path id="classpath">
+		<pathelement location="${tomcat}/common/lib/servlet-api.jar"/>
+	</path>
+	
+	<target name="init">
+		<mkdir dir="${classes}"/>
+		<mkdir dir="${dist}"/>
+	</target>
+		
+	<target name="clean">
+		<delete dir="${classes}"/>
+		<delete dir="${dist}"/>
+	</target>
+		
+	<target name="build" depends="init">
+		<javac srcdir="${src}" destdir="${classes}" debug="true">
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+	
+	<target name="dist" depends="build">
+		<jar basedir="${web}/WEB-INF/classes" destfile="${jarfile}" />
+		<jar basedir="${web}" destfile="${warfile}" />
+	</target>
+	
+</project>
+	
+	

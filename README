@@ -1,0 +1,37 @@
+RONER (ROunded corNER Generator)
+--------------------------------
+
+I got inspried from the article: http://ajaxian.com/archives/rounded-and-shaded-corners
+
+This work is derived from the actual implemenation:
+http://svn.apache.org/viewvc/tapestry/tapestry4/trunk/tapestry-contrib/src/java/org/apache/tapestry/contrib/services/impl/
+
+I have done some enhancements where you can give background color to both inner or outer to rounded corners.
+
+To get more details refer to the documentation in the docs folder.
+
+Usage:
+======
+
+1. You can use Roner offline and same the images to the file. [Scripts are in bin directory]
+
+    On Windows
+
+    roner.bat -c blue -w 100 -h 100 -bc white -a tl -f tl.png
+    roner.bat -shadow true -bc white -ibc efefef -w 100 -h 100 -aw 10 -ah 10 -sw 5 -o 0.99999 -f shbox.png
+    
+    On Linux [make sure to run dos2unix on roner.sh and give executable permission]
+    
+    roner.sh -c blue -w 100 -h 100 -bc white -a tl -f tl.png
+    roner.sh -shadow true -bc white -ibc efefef -w 100 -h 100 -aw 10 -ah 10 -sw 5 -o 0.99999 -f shbox.png
+    
+2. Deploy Roner.war on you tomcat server, then you can get images using the url:
+
+    http://localhost:8080/Roner/rounded?c=blue&a=tl&w=100&h=100&bc=white
+    http://localhost:8080/Roner/rounded?shadow=true&bc=white&ibc=efefef&w=100&h=100&aw=10&ah=10&sw=5&o=0.99999
+    
+    
+Let me know if it is useful.
+
+Thanks,
+Prasad.A    
